@@ -11,6 +11,9 @@ let numbers = [40, 68, 14, 90, 49];
 
 // CODE HERE
 
+const divTwo = numbers.forEach((e) => {
+  console.log(e / 2);
+})
 
 ////////// PROBLEM 2 //////////
 
@@ -23,6 +26,9 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
+
+const divTwo2 = numbers.map((e) => e / 2);
+console.log(divTwo2);
 
 
 ////////// PROBLEM 3 //////////
@@ -50,6 +56,10 @@ let cities = [
 */
 
 // CODE HERE
+
+const endsWithI = cities.filter((city) => city.endsWith("i"));
+
+console.log(endsWithI);
 
 
 ////////// PROBLEM 4 //////////
@@ -87,6 +97,18 @@ let fruits = [
 
 // CODE HERE
 
+// sort through the fruits array and return objects that are either apple or have an orange color
+
+fruits.forEach((e, i) => {
+  if(e.color === "red"){
+    console.log(`The fruit with index ${i} is an apple.`);
+  } else if (e.color === "orange"){
+    console.log(`The fruit with index ${i} is an orange.`);
+  } else {
+    console.log(`The fruit with index ${i} is neither apple nor orange.`);
+  }
+})
+
 
 
 /* 
@@ -99,8 +121,13 @@ let fruits = [
     The fruit with index 3 is an apple  
 */
 
+
 // COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
 
+// The fruit with index 0 is neither apple nor orange.
+// The fruit with index 1 is an orange.
+// The fruit with index 2 is neither apple nor orange.
+// The fruit with index 3 is an apple.
 
 
 ////////// PROBLEM 5 //////////
@@ -146,6 +173,10 @@ let foods = [
 
 // CODE HERE
 
+let totalRicePrice = foods.filter((e) => e.tags.includes("rice")).reduce((acc, cur) => acc + cur.price, 0);
+
+console.log(totalRicePrice);
 
 // THE TOTAL
 
+// 36
